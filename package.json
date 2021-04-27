@@ -2,9 +2,10 @@
   "name": "best-books-back-end",
   "version": "1.0.0",
   "description": "Best Book Backend App",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/Tekthree/best-books-back-end#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.6",
+    "nodemon": "^2.0.7"
   }
 }
