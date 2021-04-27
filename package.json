@@ -1,0 +1,22 @@
+{
+  "name": "best-books-back-end",
+  "version": "1.0.0",
+  "description": "Best Book Backend App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tekthree/best-books-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tekthree/best-books-back-end/issues"
+  },
+  "homepage": "https://github.com/Tekthree/best-books-back-end#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
