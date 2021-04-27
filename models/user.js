@@ -9,6 +9,7 @@ const bookSchema = new mongoose.Schema({
 })
 
 const UserSchema = new mongoose.Schema({
+  name: {type: String},
   email: {type: String, required: true},
   book: [bookSchema]
 });
