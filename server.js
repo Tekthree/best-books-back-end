@@ -46,8 +46,9 @@ async function getAllBooks(request, response) {
 
 function createABook(request, response) {
   // console.log(request)
+  console.log(request.query.email);
   const bodyBook = request.body.book;
-  const { email } = request.query;
+  const email = request.query.email;
   // console.log(email, bodyBook);
   const newBook = { name: bodyBook };
   try {
