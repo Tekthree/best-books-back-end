@@ -26,17 +26,18 @@ app.get('/books', getAllBooks)
 
 async function getAllBooks(request, response) {
   const email = request.query.email;
-  console.log({email});
+  console.log(email);
     // User.find({ email }), (err, user) => {
     //   if (err) return console.error(err);
     //   console.log({person: user})
     //   response.send(user[0].book);
     // }
     try {
-      const user = await User.find({ email })
+      const user = await User.find({email: 'huntergbritten@gmail.com'})
       console.log('made it', user);
       console.log({person: user})
-      response.send(user[0].book);
+      let books = user[0].book
+      response.send(books);
       
     } catch(error) {
       console.error(error);
