@@ -30,12 +30,13 @@ app.get('/books', getAllBooks)
 app.post('/books', createABook);
 
 async function getAllBooks(request, response) {
-  const email = request.query.email;
+  const { email } = request.query;
   console.log(email);
     try {
-      const user = await User.find({email: email})
+      const user = await User.find({email})
+      console.log('Email in getAllBooks', user);
       console.log('made it', user);
-      console.log({person: user})
+      
       let books = user[0].book
       response.send(books);
       
@@ -45,15 +46,16 @@ async function getAllBooks(request, response) {
 }
 
 function createABook(request, response) {
-  // console.log(request)
+  
   const bodyBook = request.body.book;
-  const { email } = request.query;
+  const { email, name , description } = request.body;
   // console.log(email, bodyBook);
-  const newBook = { name: bodyBook };
+  const newBook = {name, description};
   try {
     User.findOne({email}, (err, user) => {
       if(err) return console.error(err);
       user.book.push(newBook);
+      console.log(newBook);
       user.save();
       response.send(user.book);
     })
