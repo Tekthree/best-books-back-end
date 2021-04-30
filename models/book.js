@@ -41,7 +41,7 @@ Book.deleteBook = async (request, response) => {
     const user = users[0];
     const newBookArray = user.books.filter((_, i) => i !== index);
     user.books = newBookArray;
-    user[0].save();
+    user.save();
     response.send('success!');
   })
 }
