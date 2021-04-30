@@ -1,12 +1,15 @@
-http://localhost:3002/books?email=huntergbritten@gmail.com
+http://localhost:3001/books?email=huntergbritten@gmail.com
 
 ###
-http://localhost:3002/books?email=huntergbritten@gmail.com HTTP/1.1
+http://localhost:3001/books?email=huntergbritten@gmail.com HTTP/1.1
 
 ###
-POST http://localhost:3002/books?email=huntergbritten@gmail.com HTTP/1.1
+POST http://localhost:3001/books?email=huntergbritten@gmail.com HTTP/1.1
 content-type: application/json
 
 {
   "book": "coming soon"
 }
+
+###
+GET http://localhost:3001/books?email=huntergbritten@gmail.com
